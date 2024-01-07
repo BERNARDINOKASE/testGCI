@@ -10,6 +10,6 @@ class ProductController extends Controller
     public function getProducts()
     {
         $data = Products::all();
-        dd($data);
+        return view('products.getProducts', compact('data'));
     }
 }

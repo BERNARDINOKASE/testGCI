@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/register', [SesiController::class, 'register'])->name('register');
     Route::post('/register', [SesiController::class, 'reqRegister'])->name('app.register');
 });
+
+
+Route::get('/products', [ProductController::class, 'getProducts'])->name('getProducts');
