@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->required();
             $table->unsignedBigInteger('product_id')->required();
-            // $table->string('voucher_id')->nullable();
+            $table->string('voucher_id')->nullable();
             $table->timestamps();
 
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->foreignUuid('voucher_id');
+            $table->foreign('voucher_id')->references('id')->on('vouchers');
         });
     }
 
