@@ -17,4 +17,9 @@ class Products extends Model
         'quantity',
         'image',
     ];
+
+    public function transaction()
+    {
+        return $this->belongsTo(Transaction::class);
+    }
 }
