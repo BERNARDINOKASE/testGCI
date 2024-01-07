@@ -10,6 +10,8 @@ class Voucher extends Model
     use HasFactory;
     protected $guard = [];
     protected $fillable = [
-        'id'
-    ]
+        'id',
+        'name',
+        'discount',
+    ];
 }
